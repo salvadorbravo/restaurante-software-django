@@ -185,7 +185,6 @@
         <div class="food-card">
           <div class="food-card_img">
             <img src="{{v.imagen_producto.url}}" alt="">
-            <a href="#!"><i class="far fa-heart"></i></a>
           </div>
           <div class="food-card_content">
             <div class="food-card_title-section">
@@ -193,14 +192,6 @@
               <span>{{v.descripcion}}</span>
             </div>
             <div class="food-card_bottom-section">
-              <div class="space-between">
-                <div>
-                  <span class="fa fa-fire"></span> 220 - 280 Kcal
-                </div>
-                <div class="pull-right">
-                  <span class="badge badge-success">Veg</span>
-                </div>
-              </div>
               <hr>
               <div class="space-between">
                 <div class="food-card_price">
@@ -222,38 +213,35 @@
   <br>
   <br>
   <div class="row">
+    {% for mv in mas_vendidos %}
     <div class="col-sm-6 col-md-6 col-lg-4">
       <div class="food-card">
         <div class="food-card_img">
-          <img src="https://i.imgur.com/eFWRUuR.jpg" alt="">
-          <a href="#!"><i class="far fa-heart"></i></a>
+          <img src="{{mv.imagen_producto.url}}" alt="">
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
-            <a href="#!" class="food-card_author">Burger</a>
+            <a href="#!" class="food-card_title">{{mv.nombre}}</a>
+            <span>{{mv.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">
-            <div class="space-between">
-              <div>
-                <span class="fa fa-fire"></span> 220 - 280 Kcal
-              </div>
-              <div class="pull-right">
-                <span class="badge badge-success">Veg</span>
-              </div>
-            </div>
             <hr>
             <div class="space-between">
               <div class="food-card_price">
-                <span>5.99$</span>
+                <span>${{mv.precio_venta}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </div>
+<br>
+<br>
+<br>
+<br><br>
 
 <!-- Platos Novedades -->
 <div class="container">
@@ -261,77 +249,69 @@
   <br>
   <br>
   <div class="row">
+    {% for n in novedades %}
     <div class="col-sm-6 col-md-6 col-lg-4">
       <div class="food-card">
         <div class="food-card_img">
-          <img src="https://i.imgur.com/eFWRUuR.jpg" alt="">
-          <a href="#!"><i class="far fa-heart"></i></a>
+          <img src="{{n.imagen_producto.url}}" alt="">
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
-            <a href="#!" class="food-card_author">Burger</a>
+            <a href="#!" class="food-card_title">{{n.nombre}}</a>
+            <span>{{n.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">
-            <div class="space-between">
-              <div>
-                <span class="fa fa-fire"></span> 220 - 280 Kcal
-              </div>
-              <div class="pull-right">
-                <span class="badge badge-success">Veg</span>
-              </div>
-            </div>
             <hr>
             <div class="space-between">
               <div class="food-card_price">
-                <span>5.99$</span>
+                <span>${{n.precio_venta}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </div>
+<br>
+<br>
+<br>
+<br><br>
 
 <!-- Platos Generales -->
+<!-- <div class="main-content"> -->
 <div class="container">
-  <h1 class="text-center text-uppercase">Platos Comunes</h1>
+  <h1 class="text-center text-uppercase">PLATOS COMUNES</h1>
   <br>
   <br>
   <div class="row">
+    {% for g in generales %}
     <div class="col-sm-6 col-md-6 col-lg-4">
       <div class="food-card">
         <div class="food-card_img">
-          <img src="" alt="">
-          <a href="#!"><i class="far fa-heart"></i></a>
+          <img src="{{g.imagen_producto.url}}" alt="">
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
-            <a href="#!" class="food-card_author">Burger</a>
+            <a href="#!" class="food-card_title">{{g.nombre}}</a>
+            <span>{{g.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">
-            <div class="space-between">
-              <div>
-                <span class="fa fa-fire"></span> 220 - 280 Kcal
-              </div>
-              <div class="pull-right">
-                <span class="badge badge-success">Veg</span>
-              </div>
-            </div>
             <hr>
             <div class="space-between">
               <div class="food-card_price">
-                <span>5.99$</span>
+                <span>${{g.precio_venta}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </div>
+<!-- </div> -->
 
 
 {% endblock contenido %}
