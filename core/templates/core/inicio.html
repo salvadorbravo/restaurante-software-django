@@ -188,7 +188,7 @@
           </div>
           <div class="food-card_content">
             <div class="food-card_title-section">
-              <a href="#!" class="food-card_title">{{v.nombre}}</a>
+              <a href="{% url 'detalle-producto' v.id %}" class="food-card_title">{{v.nombre}}</a>
               <span>{{v.descripcion}}</span>
             </div>
             <div class="food-card_bottom-section">
@@ -221,7 +221,7 @@
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">{{mv.nombre}}</a>
+            <a href="{% url 'detalle-producto' mv.id %}" class="food-card_title">{{mv.nombre}}</a>
             <span>{{mv.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">
@@ -257,7 +257,7 @@
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">{{n.nombre}}</a>
+            <a href="{% url 'detalle-producto' n.id %}" class="food-card_title">{{n.nombre}}</a>
             <span>{{n.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">
@@ -294,7 +294,7 @@
         </div>
         <div class="food-card_content">
           <div class="food-card_title-section">
-            <a href="#!" class="food-card_title">{{g.nombre}}</a>
+            <a href="{% url 'detalle-producto' g.id %}" class="food-card_title">{{g.nombre}}</a>
             <span>{{g.descripcion}}</span>
           </div>
           <div class="food-card_bottom-section">

@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}Detalle de Platillo{% endblock titulo %}
+
+{% block contenido %}
+<div class="container mt-5">
+  <h1>Detalle del Plato</h1>
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{plato.imagen_producto.url}}" alt="Foto del Plato" class="card-img-top plato-img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">NOMBRE DEL PLATO: <p>- {{plato.nombre}}</p></h5>
+          <h5 class="card-title">DESCRIPCION DEL PLATO: <p>- {{plato.descripcion}}</p></h5>
+          <h5 class="card-title">PRECIO: </p>- ${{plato.precio_venta}}</p></h5>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary me-2" type="button">Comprar</button>
+            <button class="btn btn-success" type="button">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

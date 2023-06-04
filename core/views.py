@@ -13,3 +13,11 @@ class VistaPlatillos(View):
         generales = Plato.objects.filter(categoria='G')
         return render(request, 'core/inicio.html', {'veganos':veganos, 'mas_vendidos':mas_vendidos, 'novedades':novedades, 'generales':generales})
         
+def detalle_producto(request):
+    return render(request, 'core/detalle-producto.html')
+
+# Vista del Detalle del Plato
+class VistaDetallePlato(View):
+    def get(self, request, pk):
+        plato = Plato.objects.get(pk=pk)
+        return render(request, 'core/detalle-producto.html', {'plato':plato})
