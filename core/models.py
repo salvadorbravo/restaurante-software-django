@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 
@@ -47,7 +48,7 @@ CATEGORIA_CHOISES = (
 
 class Plato(models.Model):
     nombre = models.CharField(max_length=200)
-    precio_venta = models.FloatField()
+    precio_venta = models.FloatField(validators=[MinValueValidator(1.0)])
     descripcion = models.TextField()
     categoria = models.CharField(choices=CATEGORIA_CHOISES, max_length=80)
     imagen_producto = models.ImageField(upload_to='imagenproducto')
