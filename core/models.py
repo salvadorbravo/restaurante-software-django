@@ -43,7 +43,10 @@ CATEGORIA_CHOISES = (
     ("V", "Veganos"),
     ("MV", "Mas Vendidos"),
     ("N", "Novedades"),
-    ("G", "Generales")
+    ("G", "Generales"),
+    ("PC", "Platos Caseros"),
+    ("P", "Pastas"),
+    ("S", "Sopas")
 )
 
 class Plato(models.Model):

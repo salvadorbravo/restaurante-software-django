@@ -148,7 +148,7 @@
               class="fas fa-bars me-2"></i> MENU</button>
         </div>
         <div class="flex3 text-center" id="siteBrand">
-          <a href="/" style="text-decoration: none; color: black;">EL COMILON</a> 
+          <a href="/" style="text-decoration: none; color: black;">EL COMILON</a>
         </div>
 
         <div class="flex2 text-end d-block d-md-none">
@@ -172,29 +172,37 @@
       </div>
       <div>
         <a href="/" class="nav-menu-item"><i class="fas fa-home me-3"></i>Inicio</a>
-        <a href="#" class="nav-menu-item"><i class="fab fa-product-hunt me-3"></i>Platillos</a>
+        <a href="#" class="nav-menu-item dropdown-toggle" id="platillosDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fab fa-product-hunt me-3"></i>Categorias
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="platillosDropdown">
+          <li><a class="dropdown-item" href="#">Comida Rapida</a></li>
+          <li><a class="dropdown-item" href="#">Platos Caseros</a></li>
+          <li><a class="dropdown-item" href="{% url 'comida-vegana' %}">Platos Veganos</a></li>
+        </ul>
         <a href="#" class="nav-menu-item"><i class="fas fa-search me-3"></i>Locales</a>
         <a href="#" class="nav-menu-item"><i class="fas fa-dollar-sign me-3"></i>Contacto</a>
       </div>
     </div>
-  </div>
 
-  <script>
-    var menuHolder = document.getElementById('menuHolder')
-    var siteBrand = document.getElementById('siteBrand')
 
-    function menuToggle() {
-      if (menuHolder.className === "drawMenu") menuHolder.className = ""
-      else menuHolder.className = "drawMenu"
-    }
-    if (window.innerWidth < 426) siteBrand.innerHTML = "MAS"
-    window.onresize = function () {
-      if (window.innerWidth < 420) siteBrand.innerHTML = "MAS"
-      else siteBrand.innerHTML = "RESTAURANTE EL COMILON"
-    }
-  </script>
+    <script>
+      var menuHolder = document.getElementById('menuHolder')
+      var siteBrand = document.getElementById('siteBrand')
 
-  {% block contenido %}{% endblock contenido %}
+      function menuToggle() {
+        if (menuHolder.className === "drawMenu") menuHolder.className = ""
+        else menuHolder.className = "drawMenu"
+      }
+      if (window.innerWidth < 426) siteBrand.innerHTML = "MAS"
+      window.onresize = function () {
+        if (window.innerWidth < 420) siteBrand.innerHTML = "MAS"
+        else siteBrand.innerHTML = "RESTAURANTE EL COMILON"
+      }
+    </script>
+
+    {% block contenido %}{% endblock contenido %}
 </body>
 
 </html>

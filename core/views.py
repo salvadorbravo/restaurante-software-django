@@ -21,3 +21,9 @@ class VistaDetallePlato(View):
     def get(self, request, pk):
         plato = Plato.objects.get(pk=pk)
         return render(request, 'core/detalle-producto.html', {'plato':plato})
+    
+# Vista de la comida vegana
+def comida_vegana(request, data=None):
+    if data == None:
+        veganos = Plato.objects.filter(categoria='V')
+    return render(request, 'core/comida-vegana.html', {'veganos':veganos})
