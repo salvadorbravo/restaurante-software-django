@@ -46,7 +46,8 @@ CATEGORIA_CHOISES = (
     ("G", "Generales"),
     ("PC", "Platos Caseros"),
     ("P", "Pastas"),
-    ("S", "Sopas")
+    ("S", "Sopas"),
+    ("O", "Ofertas")
 )
 
 class Plato(models.Model):
