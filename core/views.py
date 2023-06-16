@@ -36,4 +36,5 @@ def comida_vegana(request, data=None):
 def comida_casera(request, data=None):
     if data == None:
         caseras = Plato.objects.filter(categoria='PC')
-    return render(request, 'core/comida-casera.html', {'caseras':caseras})
+        pastas = Plato.objects.filter(categoria='P')
+    return render(request, 'core/comida-casera.html', {'caseras':caseras, 'pastas':pastas})

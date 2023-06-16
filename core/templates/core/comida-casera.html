@@ -173,7 +173,7 @@
 
 <div class="main-content">
   <div class="container">
-    <h1 class="text-center text-uppercase">COMIDA CASERA</h1>
+    <h1 class="text-center text-uppercase">COMUNES</h1>
     <div class="row">
       {% for c in caseras %}
       <div class="col-sm-6 col-md-6 col-lg-4">
@@ -199,6 +199,66 @@
       </div>
       {% endfor %}
     </div>
+  </div>
+</div>
+
+<!-- SUB CATEGORIA DE PASTAS -->
+<div class="container">
+  <h1 class="text-center text-uppercase">PASTAS</h1>
+  <div class="row">
+    {% for p in pastas %}
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="food-card">
+        <div class="food-card_img">
+          <img src="{{p.imagen_producto.url}}" alt="">
+        </div>
+        <div class="food-card_content">
+          <div class="food-card_title-section">
+            <a href="{% url 'detalle-producto' p.id %}" class="food-card_title">{{p.nombre}}</a>
+            <span>{{p.descripcion}}</span>
+          </div>
+          <div class="food-card_bottom-section">
+            <hr>
+            <div class="space-between">
+              <div class="food-card_price">
+                <span>${{p.precio_venta}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- SUB CATEGORIA DE SOPAS -->
+<div class="container">
+  <h1 class="text-center text-uppercase">SOPAS</h1>
+  <div class="row">
+    {% for p in pastas %}
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="food-card">
+        <div class="food-card_img">
+          <img src="{{p.imagen_producto.url}}" alt="">
+        </div>
+        <div class="food-card_content">
+          <div class="food-card_title-section">
+            <a href="{% url 'detalle-producto' p.id %}" class="food-card_title">{{p.nombre}}</a>
+            <span>{{p.descripcion}}</span>
+          </div>
+          <div class="food-card_bottom-section">
+            <hr>
+            <div class="space-between">
+              <div class="food-card_price">
+                <span>${{p.precio_venta}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock contenido %}
