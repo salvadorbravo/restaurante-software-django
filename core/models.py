@@ -41,13 +41,14 @@ class Cliente(models.Model):
 # Modelo del Plato
 CATEGORIA_CHOISES = (
     ("V", "Veganos"),
-    ("MV", "Mas Vendidos"),
+    ("D", "Destacados"),
     ("N", "Novedades"),
     ("G", "Generales"),
     ("PC", "Platos Caseros"),
     ("P", "Pastas"),
     ("S", "Sopas"),
-    ("O", "Ofertas")
+    ("O", "Ofertas"),
+    ("CR", "Comida Rapida")
 )
 
 class Plato(models.Model):

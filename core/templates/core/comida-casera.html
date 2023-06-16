@@ -173,24 +173,24 @@
 
 <div class="main-content">
   <div class="container">
-    <h1 class="text-center text-uppercase">PLATOS CASEROS</h1>
+    <h1 class="text-center text-uppercase">COMIDA CASERA</h1>
     <div class="row">
-      {% for plato in caseras %}
+      {% for c in caseras %}
       <div class="col-sm-6 col-md-6 col-lg-4">
         <div class="food-card">
           <div class="food-card_img">
-            <img src="{{plato.imagen_producto.url}}" alt="">
+            <img src="{{c.imagen_producto.url}}" alt="">
           </div>
           <div class="food-card_content">
             <div class="food-card_title-section">
-              <a href="{% url 'detalle-producto' plato.id %}" class="food-card_title">{{plato.nombre}}</a>
-              <span>{{plato.descripcion}}</span>
+              <a href="{% url 'detalle-producto' c.id %}" class="food-card_title">{{c.nombre}}</a>
+              <span>{{c.descripcion}}</span>
             </div>
             <div class="food-card_bottom-section">
               <hr>
               <div class="space-between">
                 <div class="food-card_price">
-                  <span>${{plato.precio_venta}}</span>
+                  <span>${{c.precio_venta}}</span>
                 </div>
               </div>
             </div>

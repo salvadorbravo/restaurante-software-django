@@ -173,29 +173,29 @@
 </style>
 
 
-<!-- Platos Veganos -->
+<!-- Platos Destacados -->
 <div class="main-content">
   <div class="container">
-    <h1 class="text-center text-uppercase">Platos Veganos</h1>
+    <h1 class="text-center text-uppercase">Platos Destacados</h1>
     <br>
     <br>
     <div class="row">
-      {% for v in veganos %}
+      {% for d in destacados %}
       <div class="col-sm-6 col-md-6 col-lg-4">
         <div class="food-card">
           <div class="food-card_img">
-            <img src="{{v.imagen_producto.url}}" alt="">
+            <img src="{{d.imagen_producto.url}}" alt="">
           </div>
           <div class="food-card_content">
             <div class="food-card_title-section">
-              <a href="{% url 'detalle-producto' v.id %}" class="food-card_title">{{v.nombre}}</a>
-              <span>{{v.descripcion}}</span>
+              <a href="{% url 'detalle-producto' d.id %}" class="food-card_title">{{d.nombre}}</a>
+              <span>{{d.descripcion}}</span>
             </div>
             <div class="food-card_bottom-section">
               <hr>
               <div class="space-between">
                 <div class="food-card_price">
-                  <span>${{v.precio_venta}}</span>
+                  <span>${{d.precio_venta}}</span>
                 </div>
               </div>
             </div>
@@ -206,112 +206,4 @@
     </div>
   </div>
 </div>
-
-<!-- Platos Mas Vendidos -->
-<div class="container">
-  <h1 class="text-center text-uppercase">Mas Vendidos</h1>
-  <br>
-  <br>
-  <div class="row">
-    {% for mv in mas_vendidos %}
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="food-card">
-        <div class="food-card_img">
-          <img src="{{mv.imagen_producto.url}}" alt="">
-        </div>
-        <div class="food-card_content">
-          <div class="food-card_title-section">
-            <a href="{% url 'detalle-producto' mv.id %}" class="food-card_title">{{mv.nombre}}</a>
-            <span>{{mv.descripcion}}</span>
-          </div>
-          <div class="food-card_bottom-section">
-            <hr>
-            <div class="space-between">
-              <div class="food-card_price">
-                <span>${{mv.precio_venta}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-<br>
-<br>
-<br>
-<br><br>
-
-<!-- Platos Novedades -->
-<div class="container">
-  <h1 class="text-center text-uppercase">Novedades</h1>
-  <br>
-  <br>
-  <div class="row">
-    {% for n in novedades %}
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="food-card">
-        <div class="food-card_img">
-          <img src="{{n.imagen_producto.url}}" alt="">
-        </div>
-        <div class="food-card_content">
-          <div class="food-card_title-section">
-            <a href="{% url 'detalle-producto' n.id %}" class="food-card_title">{{n.nombre}}</a>
-            <span>{{n.descripcion}}</span>
-          </div>
-          <div class="food-card_bottom-section">
-            <hr>
-            <div class="space-between">
-              <div class="food-card_price">
-                <span>${{n.precio_venta}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-<br>
-<br>
-<br>
-<br><br>
-
-<!-- Platos Generales -->
-<!-- <div class="main-content"> -->
-<div class="container">
-  <h1 class="text-center text-uppercase">PLATOS COMUNES</h1>
-  <br>
-  <br>
-  <div class="row">
-    {% for g in generales %}
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="food-card">
-        <div class="food-card_img">
-          <img src="{{g.imagen_producto.url}}" alt="">
-        </div>
-        <div class="food-card_content">
-          <div class="food-card_title-section">
-            <a href="{% url 'detalle-producto' g.id %}" class="food-card_title">{{g.nombre}}</a>
-            <span>{{g.descripcion}}</span>
-          </div>
-          <div class="food-card_bottom-section">
-            <hr>
-            <div class="space-between">
-              <div class="food-card_price">
-                <span>${{g.precio_venta}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-<!-- </div> -->
-
-
 {% endblock contenido %}

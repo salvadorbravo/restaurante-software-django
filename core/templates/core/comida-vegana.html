@@ -1,7 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block titulo %}Platos Veganos{% endblock titulo %}
-
+{% block titulo %}Comida Vegana{% endblock titulo %}
 {% block contenido %}
 <style>
   @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
@@ -174,24 +173,24 @@
 
 <div class="main-content">
   <div class="container">
-    <h1 class="text-center text-uppercase">PLATOS VEGANOS</h1>
+    <h1 class="text-center text-uppercase">COMIDA VEGANA</h1>
     <div class="row">
-      {% for plato in veganos %}
+      {% for v in veganos %}
       <div class="col-sm-6 col-md-6 col-lg-4">
         <div class="food-card">
           <div class="food-card_img">
-            <img src="{{plato.imagen_producto.url}}" alt="">
+            <img src="{{v.imagen_producto.url}}" alt="">
           </div>
           <div class="food-card_content">
             <div class="food-card_title-section">
-              <a href="{% url 'detalle-producto' plato.id %}" class="food-card_title">{{plato.nombre}}</a>
-              <span>{{plato.descripcion}}</span>
+              <a href="{% url 'detalle-producto' v.id %}" class="food-card_title">{{v.nombre}}</a>
+              <span>{{v.descripcion}}</span>
             </div>
             <div class="food-card_bottom-section">
               <hr>
               <div class="space-between">
                 <div class="food-card_price">
-                  <span>${{plato.precio_venta}}</span>
+                  <span>${{v.precio_venta}}</span>
                 </div>
               </div>
             </div>
