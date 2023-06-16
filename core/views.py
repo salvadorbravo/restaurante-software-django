@@ -27,3 +27,11 @@ def comida_vegana(request, data=None):
     if data == None:
         veganos = Plato.objects.filter(categoria='V')
     return render(request, 'core/comida-vegana.html', {'veganos':veganos})
+
+# Vista de la comida casera
+def comida_casera(request, data=None):
+    if data == None:
+        caseras = Plato.objects.filter(categoria='PC')
+    return render(request, 'core/comida-casera.html', {'caseras':caseras})
+
+# Vista de la comida rapida

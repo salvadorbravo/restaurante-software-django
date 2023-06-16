@@ -1,7 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block titulo %}Platos Veganos{% endblock titulo %}
-
+{% block titulo %}Comida Casera{% endblock titulo %}
 {% block contenido %}
 <style>
   @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
@@ -174,9 +173,9 @@
 
 <div class="main-content">
   <div class="container">
-    <h1 class="text-center text-uppercase">PLATOS VEGANOS</h1>
+    <h1 class="text-center text-uppercase">PLATOS CASEROS</h1>
     <div class="row">
-      {% for plato in veganos %}
+      {% for plato in caseras %}
       <div class="col-sm-6 col-md-6 col-lg-4">
         <div class="food-card">
           <div class="food-card_img">
