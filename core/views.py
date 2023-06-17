@@ -37,4 +37,5 @@ def comida_casera(request, data=None):
     if data == None:
         caseras = Plato.objects.filter(categoria='PC')
         pastas = Plato.objects.filter(categoria='P')
-    return render(request, 'core/comida-casera.html', {'caseras':caseras, 'pastas':pastas})
+        sopas = Plato.objects.filter(categoria='S')
+    return render(request, 'core/comida-casera.html', {'caseras':caseras, 'pastas':pastas, 'sopas':sopas})
