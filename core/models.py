@@ -42,12 +42,12 @@ class Cliente(models.Model):
 CATEGORIA_CHOISES = (
     ("V", "Veganos"),
     ("D", "Destacados"),
-    ("N", "Novedades"),
-    ("G", "Generales"),
+    # ("N", "Novedades"),
+    # ("G", "Generales"),
     ("PC", "Platos Caseros"),
     ("P", "Pastas"),
     ("S", "Sopas"),
-    ("O", "Ofertas"),
+    # ("O", "Ofertas"),
     ("CR", "Comida Rapida")
 )
 

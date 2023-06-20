@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load humanize %}
 {% block titulo %}Inicio{% endblock titulo %}
 
 {% block contenido %}
@@ -195,7 +196,7 @@
               <hr>
               <div class="space-between">
                 <div class="food-card_price">
-                  <span>${{d.precio_venta}}</span>
+                  <span>${{d.precio_venta|intcomma}}</span>
                 </div>
               </div>
             </div>
